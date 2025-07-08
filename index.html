@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: lightgoldenrodyellow;
+            margin: 0;
+        }
+        section.screen-container{
+            display: flex;
+            justify-content: center;
+        }
+        div#screen{
+            width: 50rem;
+            p{
+                font-size:2.5rem;
+                text-align: right;
+                padding: 3mm;
+                margin: 1rem;
+                border: 1mm solid green;
+                background-color: lawngreen;
+            }
+        }
+        button{
+            padding: 1rem 2rem;
+            font-size: 2.5rem;
+            border-radius: 10px;
+            margin: 0.1rem 0.5rem;
+            box-shadow: 15px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+        div.options, div.operators{
+            button{
+                background-color: steelblue;
+                color: darkblue;
+                border: 5px solid darkblue;
+            }
+            button:hover{
+                background-color: darkblue;
+                color: steelblue;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        div.numberpad{
+            button{
+                background-color: red;
+                color: darkred;
+                border: 5px solid darkred;
+            }
+            button:hover{
+                background-color: darkred;
+                color: red;
+            }
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+        }
+        section.buttons{
+            display: flex;
+            justify-content: center;
+        }
+        div#header{
+            background-color: blue;
+            text-align: center;
+            color: white;
+            padding: 0.5mm;
+        };
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>A calculator, let's have some fun!!</h1>
+    </div>
+    <section class="screen-container">
+        <div id="screen">
+        </div>
+    </section>
+    <section class="buttons">
+        <div class="options">
+            <button id="AC">AC</button>
+            <button id="DEL">DEL</button>
+            <button id="=">=</button>
+        </div>
+        <div class="numberpad">
+            <section class="first-row">
+                <button id="1">1</button>
+                <button id="2">2</button>
+                <button id="3">3</button>
+            </section>
+            <section class="second-row">
+                <button id="4">4</button>
+                <button id="5">5</button>
+                <button id="6">6</button>
+            </section>
+            <section class="third-row">
+                <button id="7">7</button>
+                <button id="8">8</button>
+                <button id="9">9</button>
+            </section>
+            <section class="final-row">
+                <button id="0">0</button>
+                <button id=".">.</button>
+            </section>
+        </div>
+        <div class="operators">
+            <button id="+">+</button>
+            <button id="-">-</button>
+            <button id="x">x</button>
+            <button id="÷">÷</button>
+        </div>
+    </section>
+    <script src="javascript.js"></script>
+</body>
+</html>
